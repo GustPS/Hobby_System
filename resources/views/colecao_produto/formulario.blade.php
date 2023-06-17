@@ -24,7 +24,7 @@
                             </div>
                         @endif
 
-                        @if (Route::is('colecao.show'))
+                        @if (Route::is('colecao_produto.show'))
                             {!! Form::model($colecoes_produtos, ['method' => 'PATCH', 'url' => 'colecao_produto/' . $colecoes_produtos->id]) !!}
                         @else
                             {!! Form::open(['method' => 'POST', 'url' => 'colecao_produto']) !!}

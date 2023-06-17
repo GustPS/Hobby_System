@@ -57,12 +57,12 @@ class Colecoes_ProdutosController extends Controller
      */
     public function show($colecao_Produto_id)
     {
-        $colecao_Produto = Colecao_Produto::findOrFail($colecao_Produto_id);
+        $colecoes_produtos = Colecao_Produto::findOrFail($colecao_Produto_id);
         $colecoes = Colecao::select('nome', 'id')->pluck('nome', 'id');
         $produtos = Produto::select('nome', 'id')->pluck('nome', 'id');
         return view(
             'colecao_produto.formulario',
-            compact('produtos', 'colecoes')
+            compact('produtos', 'colecoes', 'colecoes_produtos')
         );
     }
 
