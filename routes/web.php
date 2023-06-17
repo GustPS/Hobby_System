@@ -3,6 +3,7 @@
 use App\Http\Controllers\Colecoes_ProdutosController;
 use App\Http\Controllers\ColecoesController;
 use App\Http\Controllers\comentariosController;
+use App\Http\Controllers\ContatosController;
 use App\Http\Controllers\HobbiesController;
 use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Auth;
@@ -37,3 +38,6 @@ Route::resource('colecao', ColecoesController::class);
 Route::resource('colecao_produto', Colecoes_ProdutosController::class);
 Route::resource('hobbie', HobbiesController::class);
 Route::resource('comentario', comentariosController::class);
+
+Route::get('contatos', [ContatosController::class, 'index']);
+Route::post('contatos', [ContatosController::class, 'enviar']);

@@ -45,6 +45,9 @@
                             <li class="nav-item">
                                 <a href="{{ url('colecao_produto') }}" class="nav-link">Coleções _Produtos</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ url('contatos') }}" class="nav-link">Contato</a>
+                            </li>
 
 
                         @endauth
